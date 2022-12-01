@@ -21,8 +21,8 @@ body {
     align-items: center;
     height: auto;
     width: 100vw;
-    font-size: 5rem;
-    font-weight: 900;
+    font-size: 3rem;
+    font-weight: 300;
     flex-wrap: nowrap;
 }
 

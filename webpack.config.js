@@ -11,7 +11,7 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Free Pictures of Dogs',
+      title: 'Free Pictures of Ajax',
     }),
   ],
   output: {
