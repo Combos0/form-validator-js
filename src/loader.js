@@ -32,30 +32,46 @@ export default function initialLoader() {
 
         const nameLabel = document.createElement('label');
         nameLabel.textContent = 'Name:';
+        nameLabel.setAttribute('for', 'name');
         form.appendChild(nameLabel);
 
         const nameInput = document.createElement('input');
+        nameInput.setAttribute('id', 'name');
+        nameInput.setAttribute('type', 'text');
+        nameInput.setAttribute('name', 'user_name');
         form.appendChild(nameInput);
 
         const emailLabel = document.createElement('label');
         emailLabel.textContent = 'Email:';
+        emailLabel.setAttribute('for', 'email');
         form.appendChild(emailLabel);
 
         const emailInput = document.createElement('input');
+        emailInput.setAttribute('type', 'email');
+        emailInput.setAttribute('id', 'email');
+        emailInput.setAttribute('name', 'user_email');
         form.appendChild(emailInput);
 
         const countryLabel = document.createElement('label');
         countryLabel.textContent = 'Country:';
+        countryLabel.setAttribute('for', 'country');
         form.appendChild(countryLabel);
 
         const countryInput = document.createElement('input');
+        countryInput.setAttribute('type', 'text');
+        countryInput.setAttribute('id', 'country');
+        countryInput.setAttribute('name', 'user_country');
         form.appendChild(countryInput);
 
         const zipCodeLabel = document.createElement('label');
         zipCodeLabel.textContent = 'Zip code:';
+        zipCodeLabel.setAttribute('for', 'zip-code');
         form.appendChild(zipCodeLabel);
 
         const zipCodeInput = document.createElement('input');
+        zipCodeInput.setAttribute('type', 'number');
+        zipCodeInput.setAttribute('id', 'zip-code');
+        zipCodeInput.setAttribute('name', 'user_zip_code');
         form.appendChild(zipCodeInput);
     };
 
