@@ -74,6 +74,11 @@ export default function initialLoader() {
         zipCodeInput.setAttribute('id', 'zip-code');
         zipCodeInput.setAttribute('name', 'user_zip_code');
         form.appendChild(zipCodeInput);
+
+        const formSubmit = document.createElement('button');
+        formSubmit.setAttribute('type', 'submit');
+        formSubmit.textContent = 'Submit';
+        form.appendChild(formSubmit);
     };
 
     function createImageSpace() {
