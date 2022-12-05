@@ -27,39 +27,36 @@ export default function initialLoader() {
         formSpace.appendChild(formTitle);
 
         const form = document.createElement('form');
-        form.setAttribute.setAttribute('id', 'subscribe-form');
+        form.setAttribute('id', 'subscribe-form');
         formSpace.appendChild(form);
-
-        const formFieldSet = document.createElement('fieldset');
-        form.appendChild(formFieldSet);
 
         const nameLabel = document.createElement('label');
         nameLabel.textContent = 'Name:';
-        formFieldSet.appendChild(nameLabel);
+        form.appendChild(nameLabel);
 
         const nameInput = document.createElement('input');
-        formFieldSet.appendChild(nameInput);
+        form.appendChild(nameInput);
 
         const emailLabel = document.createElement('label');
         emailLabel.textContent = 'Email:';
-        formFieldSet.appendChild(emailLabel);
+        form.appendChild(emailLabel);
 
         const emailInput = document.createElement('input');
-        formFieldSet.appendChild(emailInput);
+        form.appendChild(emailInput);
 
         const countryLabel = document.createElement('label');
         countryLabel.textContent = 'Country:';
-        formFieldSet.appendChild(countryLabel);
+        form.appendChild(countryLabel);
 
         const countryInput = document.createElement('input');
-        formFieldSet.appendChild(countryInput);
+        form.appendChild(countryInput);
 
         const zipCodeLabel = document.createElement('label');
         zipCodeLabel.textContent = 'Zip code:';
-        formFieldSet.appendChild(zipCodeLabel);
+        form.appendChild(zipCodeLabel);
 
         const zipCodeInput = document.createElement('input');
-        formFieldSet.appendChild(zipCodeInput);
+        form.appendChild(zipCodeInput);
     };
 
     function createImageSpace() {

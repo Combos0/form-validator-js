@@ -10,6 +10,16 @@ button {
     
 }
 
+label {
+    width: auto;
+    height: auto;
+}
+
+input {
+    width: 10rem;
+    height: auto;
+}
+
 #header {
     background-color: blue;
     color: white;
@@ -65,7 +75,19 @@ button {
     height: 25vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     background-color: aqua;
+}
+
+#subscribe-form {
+    display: grid;
+    padding: 1rem 5rem;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 #footer {
@@ -77,4 +99,6 @@ button {
     color: white;
     height: 5vh;
     width: 100vw;
+    bottom: 0;
+    position: fixed;
 }
