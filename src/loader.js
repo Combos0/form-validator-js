@@ -69,7 +69,8 @@ export default function initialLoader() {
         form.appendChild(zipCodeLabel);
 
         const zipCodeInput = document.createElement('input');
-        zipCodeInput.setAttribute('type', 'number');
+        zipCodeInput.setAttribute('type', 'text');
+        zipCodeInput.setAttribute('pattern', '[0-9]*');
         zipCodeInput.setAttribute('id', 'zip-code');
         zipCodeInput.setAttribute('name', 'user_zip_code');
         form.appendChild(zipCodeInput);
