@@ -28,6 +28,7 @@ export default function initialLoader() {
 
         const form = document.createElement('form');
         form.setAttribute('id', 'subscribe-form');
+        form.noValidate = true;
         formSpace.appendChild(form);
 
         const nameLabel = document.createElement('label');
@@ -36,6 +37,10 @@ export default function initialLoader() {
         form.appendChild(nameLabel);
 
         const nameInput = document.createElement('input');
+        nameInput.setAttribute('minlength', '2');
+        nameInput.setAttribute('maxlength', '20');
+        nameInput.required = true;
+        nameInput.setAttribute('placeholder', 'kennyL');
         nameInput.setAttribute('id', 'name');
         nameInput.setAttribute('type', 'text');
         nameInput.setAttribute('name', 'user_name');
@@ -50,6 +55,7 @@ export default function initialLoader() {
         emailInput.setAttribute('type', 'email');
         emailInput.setAttribute('id', 'email');
         emailInput.setAttribute('name', 'user_email');
+        emailInput.setAttribute('placeholder', 'shitheadkenny@garbagemail.com');
         form.appendChild(emailInput);
 
         const countryLabel = document.createElement('label');
@@ -61,6 +67,7 @@ export default function initialLoader() {
         countryInput.setAttribute('type', 'text');
         countryInput.setAttribute('id', 'country');
         countryInput.setAttribute('name', 'user_country');
+        countryInput.setAttribute('placeholder', 'united states');
         form.appendChild(countryInput);
 
         const zipCodeLabel = document.createElement('label');
@@ -73,10 +80,12 @@ export default function initialLoader() {
         zipCodeInput.setAttribute('pattern', '[0-9]*');
         zipCodeInput.setAttribute('id', 'zip-code');
         zipCodeInput.setAttribute('name', 'user_zip_code');
+        zipCodeInput.setAttribute('placeholder', '43212');
         form.appendChild(zipCodeInput);
 
         const formSubmit = document.createElement('button');
         formSubmit.setAttribute('type', 'submit');
+        formSubmit.setAttribute('id', 'form-submit');
         formSubmit.textContent = 'Submit';
         form.appendChild(formSubmit);
     };
@@ -122,5 +131,11 @@ export default function initialLoader() {
         aboutBTN.setAttribute('id', 'about-BTN');
         aboutBTN.textContent = 'About';
         navBar.appendChild(aboutBTN);
+
+        const picsBTN = document.createElement('button');
+        picsBTN.setAttribute('type', 'button');
+        picsBTN.setAttribute('id', 'pics-BTN');
+        picsBTN.textContent = 'Pictures';
+        navBar.appendChild(picsBTN);
     };
 };
